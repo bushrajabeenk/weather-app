@@ -1,0 +1,48 @@
+body {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/3d5d3384e649642b5a3ef456e3779053-1200-80.jpg");
+  background-size: cover;
+}
+
+#container {
+  color: white;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#container > div {
+  margin-top: 40px;
+}
+
+#container > div:first-child {
+  margin-right: 150px;
+}
+
+#nextcontainer {
+  color: white;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+
+#nextcontainer > div {
+  height: 310px;
+  width: 100%;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+#nextcontainer > div:nth-child(even) {
+  background-color: rgb(182, 241, 213);
+}
+
+#nextcontainer > div:nth-child(odd) {
+  background-color: rgb(121, 238, 183);
+}
