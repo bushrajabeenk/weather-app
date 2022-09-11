@@ -1,5 +1,6 @@
 body {
-  background-image: url("https://cdn.mos.cms.futurecdn.net/3d5d3384e649642b5a3ef456e3779053-1200-80.jpg");
+  text-align: center;
+  background-image: url("https://cdn.pixabay.com/photo/2020/02/21/17/23/sky-4868218_1280.jpg");
   background-size: cover;
 }
 
@@ -17,11 +18,11 @@ body {
 }
 
 #container > div:first-child {
-  margin-right: 150px;
+  margin-right: 50px;
 }
 
 #nextcontainer {
-  color: white;
+  color: rgb(179, 118, 5);
   width: 90%;
   display: flex;
   justify-content: center;
@@ -45,4 +46,21 @@ body {
 
 #nextcontainer > div:nth-child(odd) {
   background-color: rgb(121, 238, 183);
+}
+
+#name1 {
+  font-size: 25px;
+  color: blue;
+}
+
+#div1 {
+  width: 250px;
+  height: 300px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color:rgba(255, 255, 255, 0.7);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: left;
 }

@@ -31,27 +31,33 @@ function appendData(data) {
   container1.innerHTML = null;
 
   let div1 = document.createElement("div");
+  div1.setAttribute("id", "div1");
 
   let name = document.createElement("h3");
-  name.innerText = `CITY ${data.name}`;
+  name.setAttribute("id", "name1");
+  name.innerText = `${data.name}`;
 
   let temp_max = document.createElement("h3");
-  temp_max.innerText = `MAX TEMPERATURE ${data.main.temp_max}`;
+  temp_max.innerText = `Max: ${data.main.temp_max}°C`;
 
   let temp_min = document.createElement("h3");
-  temp_min.innerText = `MIN TEMPERATURE ${data.main.temp_min}`;
+  temp_min.innerText = `Min: ${data.main.temp_min}°C`;
 
   let wind = document.createElement("h3");
-  wind.innerText = ` WIND SPEED ${data.wind.speed}`;
+  wind.innerText = ` Wind Speed: ${data.wind.speed}m/s`;
 
   let clouds = document.createElement("h3");
-  clouds.innerText = `CLOUDS ${data.clouds.all}`;
+  clouds.innerText = `Clouds: ${data.clouds.all}`;
 
   let sunrise = document.createElement("h3");
-  sunrise.innerText = `SUNRISE ${data.sys.sunrise}`;
+  sunrise.innerText = `Sunrise: ${window
+    .moment(data.sys.sunrise * 1000)
+    .format("HH:mm a")}`;
 
   let sunset = document.createElement("h3");
-  sunset.innerText = `SUNSET ${data.sys.sunset}`;
+  sunset.innerText = `Sunset: ${window
+    .moment(data.sys.sunset * 1000)
+    .format("HH:mm a")}`;
 
   div1.append(name, temp_max, temp_min, wind, clouds, sunrise, sunset);
 
@@ -59,7 +65,7 @@ function appendData(data) {
 
   let iframe = document.createElement("iframe");
   iframe.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBgQBVeDxN3gpwYaImC94iaL0nN7S81tjY&q=${data.name}`;
-  iframe.height = `300px`;
+  iframe.height = `350px`;
   iframe.width = `500px`;
   iframe.style.borderRadius = `10px`;
 
@@ -96,11 +102,11 @@ function appendData2(data2) {
 
     let p3 = document.createElement("h1");
     var maximum = el.temp.max.toFixed(0);
-    p3.innerText = `${maximum}`;
+    p3.innerText = `${maximum}°C`;
 
     let p4 = document.createElement("h2");
     var minimum = el.temp.min.toFixed(0);
-    p4.innerText = `${minimum}`;
+    p4.innerText = `${minimum}°C`;
 
     let p5 = document.createElement("p");
     p5.innerText = `${el.sunrise}`;
